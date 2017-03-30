@@ -1,0 +1,20 @@
+- test:
+    - name: "check get"
+    - url: "http://demo6865624.mockable.io"
+    - method: "GET"
+    - validators:
+        - compare: {header: "content-type", comparator: contains, expected: 'application/json'}
+
+- test:
+    - name: "check post"
+    - url: "http://demo6865624.mockable.io"
+    - method: "POST"
+    - body: '{"msg": "Hello World.","username": "anu","password": "sin","id": "10"}'
+    - headers: {Content-Type: application/json}
+    - extract_binds:
+        - 'id': {'jsonpath_mini': 'id'}
+
+- test:
+    - name: "check delete"
+    - url: "http://demo6865624.mockable.io"
+    - method: "DELETE"
