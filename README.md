@@ -16,4 +16,4 @@ pyresttest <http://url> yamlfile
 
 ## References:
 
-* (Learn about Pyresttest)[https://github.com/svanoort/pyresttest]
+* [Learn about Pyresttest](https://github.com/svanoort/pyresttest)
