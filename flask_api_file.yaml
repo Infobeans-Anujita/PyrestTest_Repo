@@ -1,0 +1,16 @@
+- test:
+    - name: "check get all the values"
+    - url: "http://127.0.0.1:8081/"
+    - method: "GET"
+    - extract_binds:
+        - 'id': {'jsonpath_mini': 'id'}
+    - validators:
+        - compare: {header: 'Content-Type', comparator: 'str_eq', expected: "application/json"}
+
+- test:
+    - name: "return all get values"
+    - url: {'template': "http://127.0.0.1:8081/users"}
+    - method: "GET"
+    - validators:
+        - json_schema: {schema: {file: 'apifile.json'}}
+        - compare: {jmespath: 'users["24"]["name"]', comparator: str_eq, expected: 'anujita'}
