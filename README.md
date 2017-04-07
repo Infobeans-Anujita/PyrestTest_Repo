@@ -14,6 +14,10 @@
 pyresttest <http://url> yamlfile
 ```
 
+## How to call Flask API?
+
+* Use sample Flask API python file in Repo "Sample_Flask_API", branch "flask_api", filename "restapidyn.py"
+
 ## References:
 
 * [Learn about Pyresttest](https://github.com/svanoort/pyresttest)
